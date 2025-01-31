@@ -1,0 +1,774 @@
+---
+format: html
+embed-resources: true
+---
+
+![fundamentals of MMM](./img/thumbnail.png)
+
+# Marketing Mix Modeling Fundamentals - Interactive 
+
+Marketing Mix Modeling (MMM) is a technique used by businesses to measure the effectiveness of different marketing channels and strategies. The goal is to isolate the impact of media spend on business performance, allowing for accurate measurement of Return on Investment (ROI) and optimization of future marketing efforts.
+
+Unlike other methodologies that may overlook external factors, MMM takes a more holistic view by accounting for key drivers of business performance beyond just media spend. This includes elements like seasonality, economic conditions, competitor activity, price changes, and consumer trends. By isolating these variables, MMM provides a clearer understanding of the true impact that marketing efforts have on business outcomes.
+
+### Why Use MMM?
+
+The primary purpose of MMM is to understand what drives business results—sales, store visits, website traffic—and to determine the contribution of different marketing tactics. Whether it’s television advertising, social media campaigns, or digital ads, MMM enables marketers to identify which efforts deliver the best ROI. With this information, they can optimize budgets to maximize returns on future campaigns.
+
+A key strength of MMM is its ability to provide insights while controlling for external factors. This allows marketers to avoid overestimating or underestimating the contribution of media by factoring in variables such as economic trends, competitor actions, and seasonal fluctuations. This is an area where other methodologies, like Multi-Touch Attribution (MTA), can fall short, often failing to account for these broader market influences.
+
+### How Does MMM Work?
+
+At the core of MMM are statistical techniques, particularly regression analysis. These methods model the relationship between dependent variables (such as sales or web visits) and independent variables (such as media spend, pricing, and economic factors).
+
+#### Ordinary Least Squares (OLS)
+
+One of the most straightforward and widely used techniques in MMM is Ordinary Least Squares (OLS) regression. OLS estimates coefficients that describe the relationship between the dependent and independent variables. For example, it can determine how much of an increase in sales is driven by an increase in media spend while accounting for other influencing factors like seasonality and trends. Without getting caught up in the maths, this algorithm estimates coefficients for a linear model by minimising the sum of squared errors (the distance between actual and predicted sales, for example).
+
+While OLS is powerful in its simplicity, it is just one of many algorithms that can be used to estimate these relationships. More complex models may incorporate other advanced techniques, particularly when non-linear relationships need to be modeled.
+
+### Non-Linear Relationships in MMM
+
+In real-world marketing, the relationship between media spend and business outcomes is often not a straightforward linear one. Two important concepts that are frequently modeled in MMM are adstock and diminishing returns.
+
+#### Adstock
+
+Adstock refers to the idea that the impact of advertising doesn’t end the moment the ad stops running. Instead, it decays over time as the audience’s memory of the ad fades. This decay can be modeled using adstock functions, which allow MMM models to capture the lingering effects of media campaigns over time.
+
+Adstock models help in understanding how much residual impact a campaign might have days or even weeks after the media spend has occurred. This is critical for long-term campaign planning and understanding the full ROI of media efforts.
+
+#### Diminishing Returns
+
+Another non-linear relationship in marketing is the concept of diminishing returns. This suggests that as you continue to increase media spend, the incremental gains in business outcomes will eventually start to decrease. For example, doubling your media spend won’t necessarily double your sales. At a certain point, the market becomes saturated, and each additional dollar spent yields a lower return.
+
+In MMM, diminishing returns can be modeled using various techniques that allow for non-linear relationships between variables, ensuring more accurate predictions and better optimization of marketing spend.
+
+### Visualizing MMM Concepts with Interactive Charts
+
+To better understand how these concepts work, interactive charts can provide step-by-step visualizations of different MMM techniques. The following section contains several interactive charts to drive home the concepts discussed above.
+
+#### Regression: OLS
+
+This is an example of a simple OLS model that illustrates the concept of squared errors. Use the sliders to change the values of the intercept and the coefficient, the values estimated by the regression algorithm.
+
+```{=html}
+<style>
+/* General slider styles */
+input[type="range"] {
+  -webkit-appearance: none; /* Removes default styling in WebKit browsers */
+  height: 8px; /* Height of the slider track */
+  background: #ddd; /* Light background color for the track */
+  outline: none; /* No outline on focus */
+  border-radius: 5px; /* Round track edges */
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Removes default styling */
+  appearance: none;
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  background: black; /* Blue color for the thumb */
+  cursor: pointer; /* Show pointer cursor */
+  border-radius: 50%; /* Make thumb circular */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: background 0.3s ease; /* Smooth color change on hover */
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: #0056b3; /* Darker blue when hovered */
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #003580; /* Even darker blue when active (clicked) */
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: black;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background: black;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background: black;
+}
+
+/* Track styles for Firefox */
+input[type="range"]::-moz-range-track {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* For Internet Explorer */
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: black;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: transparent; /* Remove default track background */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+</style>
+
+<div>
+  <em style="display:block;text-align:center;width:100%">Sales = <span id="olsIntercept">10000</span> + <span id="olsCoef">2</span>&#215;Media Spend</em>
+</div>
+<div style="display:flex;flex-direction:row">
+  <div style="display:flex;flex-direction:column;justify-content:center">
+    <div>
+      <label for="slope">Coefficient: <span id="slopeSales">2</span></label>
+      <input type="range" id="slope" name="slope" min="0" max="5" step="0.5" value="2">
+    </div>
+    <div style="margin-top:10px">
+      <label for="intercept">Intercept: <span id="interceptSales">10000</span></label>
+      <input type="range" id="intercept" name="intercept" min="0" max="20000" step="1000" value="10000">
+    </div>
+    <div style="margin-top:20px">
+      <button id="resetButton1">Reset Sliders</button>
+    </div>
+  </div>
+  <canvas id="regressionChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx1 = document.getElementById('regressionChart').getContext('2d');
+    const xValues = Array.from({ length: 10 }, (_, i) => i * 1000);
+    let slope = 2;
+    let intercept = 10000;
+
+    // Function to generate fixed y-values based on y = 2x + 10K with noise
+    const originalYValues = xValues.map(x => 2 * x + 10000 + ((Math.random()-.5) * 5000)); // Random variation
+
+    // Function to generate y-values for the regression line
+    function generateRegressionLine(slope, intercept) {
+        return xValues.map(x => slope * x + intercept);
+    }
+
+    let regressionYValues = generateRegressionLine(slope, intercept);
+
+    const regressionChart = new Chart(ctx1, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Sales vs Media Spend (Points)',
+                    data: xValues.map((x, i) => ({ x: x, y: originalYValues[i] })),
+                    backgroundColor: 'rgba(75, 192, 192, 1)',
+                    showLine: false
+                },
+                {
+                    label: 'Adjustable Regression Line',
+                    data: xValues.map((x, i) => ({ x: x, y: regressionYValues[i] })),
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    type: 'line',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    title: {
+                        display: true,
+                        text: 'Media Spend'
+                    },
+                    grid:{display:false},
+                    min: 0,  // Fix x-axis minimum
+                    max: 9000  // Fix x-axis maximum
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Sales'
+                    },
+                    grid:{display:false},
+                    min: 0,  // Fix y-axis minimum
+                    max: 40000  // Fix y-axis maximum
+                }
+            },
+            animation: {
+                duration: 10, // Animation duration in milliseconds
+                easing: 'easeInOutQuad', // Easing function for smooth transitions
+            }
+        },
+        plugins: [{
+            // This plugin draws the OLS residual squares with smooth animation
+            afterDatasetsDraw: function(chart) {
+                const ctx = chart.ctx;
+                chart.data.datasets[0].data.forEach((point, i) => {
+                    const actualY = chart.scales.y.getPixelForValue(point.y);
+                    const predictedY = chart.scales.y.getPixelForValue(regressionYValues[i]);
+                    const x = chart.scales.x.getPixelForValue(point.x);
+
+                    const residual = Math.abs(actualY - predictedY);
+
+                    // Set both width and height equal to the residual distance
+                    const squareSize = residual;
+
+                    // Smoothly transition the square's position and size
+                    ctx.save();  // Save the current drawing state
+                    ctx.beginPath();
+                    ctx.rect(x - squareSize, Math.min(actualY, predictedY), squareSize, residual);  // Square width and height
+                    ctx.fillStyle = 'rgba(54, 162, 235, 0.5)';
+                    ctx.fill();
+                    ctx.closePath();
+                    ctx.restore();  // Restore the drawing state for the next square
+                });
+            }
+        }]
+    });
+
+    // Update function for sliders
+    function updateChart1() {
+        slope = parseFloat(document.getElementById('slope').value);
+        intercept = parseFloat(document.getElementById('intercept').value);
+        document.getElementById('slopeSales').textContent = slope;
+        document.getElementById('interceptSales').textContent = intercept;
+        document.getElementById('olsIntercept').innerHTML = intercept;
+        document.getElementById('olsCoef').innerHTML = slope;
+
+        regressionYValues = generateRegressionLine(slope, intercept);
+        regressionChart.data.datasets[1].data = xValues.map((x, i) => ({ x: x, y: regressionYValues[i] }));
+        regressionChart.update();
+    }
+
+    // Attach event listeners to sliders
+    document.getElementById('slope').addEventListener('input', updateChart1);
+    document.getElementById('intercept').addEventListener('input', updateChart1);
+
+    // Gradually move slider values function
+    function graduallyMoveSlider(sliderId, targetValue, step, delay, callback) {
+        const slider = document.getElementById(sliderId);
+        let currentValue = parseFloat(slider.value);
+        const direction = targetValue > currentValue ? 1 : -1;
+
+        function moveStep() {
+            if ((direction === 1 && currentValue < targetValue) || (direction === -1 && currentValue > targetValue)) {
+                currentValue += direction * step;
+                slider.value = Math.round(currentValue * 10) / 10;  // Keep it rounded to 1 decimal place
+                document.getElementById(sliderId + 'Sales').textContent = slider.value;
+                updateChart1();
+                setTimeout(moveStep, delay);
+            } else {
+                callback(); // Call callback once completed
+            }
+        }
+        moveStep();
+    }
+
+    // Reset button event listener with gradual movement
+    document.getElementById('resetButton1').addEventListener('click', function() {
+        // Gradually move the slope and intercept sliders
+        graduallyMoveSlider('slope', 2, 0.1, 10, function() {
+            graduallyMoveSlider('intercept', 10000, 100, 5, function() {
+                // Sliders have reached their target values
+                updateChart1();
+            });
+        });
+    });
+</script>
+
+```
+
+
+#### Time Series and OLS: 
+
+Similarly to the previous example, here we can visualise the same linear model by looking at the data over time. The linear model works in the same way; it is only the way we are looking at the model that changed. Here we are visualising the contribution of each variable in explaining the fluctuations in our Sales. Changing the values of the sliders illustrates how cofficients determine the size of a variable's impact (i.e. Media Spend's contribution). 
+
+```{=html}
+<div style="display:flex;flex-direction:row">
+  <div style="display:flex;flex-direction:column;justify-content:center; margin-right: 20px;">
+    <div>
+      <label for="coefficient">Coefficient: <span id="bValue">2</span></label>
+      <input type="range" id="tsCoefficient" name="tsCoefficient" min="0" max="3" step="0.1" value="2">
+    </div>
+    <div style="margin-top:10px">
+      <label for="base">Base: <span id="baseValue">10000</span></label>
+      <input type="range" id="tsBase" name="tsBase" min="0" max="20000" step="1000" value="10000">
+    </div>
+    <div style="margin-top:20px">
+      <button id="resetButton2">Reset Sliders</button>
+    </div>
+  </div>
+  <canvas id="olsChart" width="600" height="400"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Time series data for media spend
+    const mediaSpend = [0, 0, 0, 0, 0, 10000, 0, 0, 0, 5000, 15000, 0, 0, 0, 0];
+
+    // Generate random noise for sales
+    const noise = Array.from({ length: mediaSpend.length }, () => Math.random() * 2000 - 1000);
+
+    // Initialize variables for sliders
+    let b = 2;  // Coefficient for media spend
+    let base = 10000;  // Base constant
+
+    // Calculate media contribution based on b
+    function calculateMediaContribution() {
+        return mediaSpend.map(value => value * b);
+    }
+
+    // Fixed sales = media spend * 2 + base + noise
+    const fixedSales = mediaSpend.map((value, i) => value * 2 + 10000 + noise[i]);
+
+    // Initial calculations
+    let mediaContribution = calculateMediaContribution();
+
+    // Create the Chart
+    const ctx2 = document.getElementById('olsChart').getContext('2d');
+    const olsChart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: Array.from({ length: mediaSpend.length }, (_, i) => `Week ${i+1}`),
+            datasets: [
+                {
+                    label: 'Base',
+                    data: Array(mediaSpend.length).fill(base),
+                    backgroundColor: 'rgba(255, 159, 64, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Media Contribution',
+                    data: mediaContribution,
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Sales',
+                    data: fixedSales,
+                    type: 'line',
+                    fill: false,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true,
+                    grid:{display:false}
+                },
+                y: {
+                    beginAtZero: true,
+                    stacked: true,
+                    min: 0,   // Set y-axis minimum
+                    max: 60000, // Set y-axis maximum
+                    title: {
+                        display: true,
+                        text: 'Sales'
+                    },
+                    grid:{display:false}
+                }
+            }
+        }
+    });
+
+    // Function to update the chart based on slider values
+    function updateChart2() {
+        // Get updated slider values
+        b = parseFloat(document.getElementById('tsCoefficient').value);
+        base = parseFloat(document.getElementById('tsBase').value);
+        
+        document.getElementById('bValue').textContent = b;
+        document.getElementById('baseValue').textContent = base;
+
+        // Recalculate media contribution
+        mediaContribution = calculateMediaContribution();
+
+        // Update chart data for media contribution and base
+        olsChart.data.datasets[0].data = Array(mediaSpend.length).fill(base);  // Base at the bottom
+        olsChart.data.datasets[1].data = mediaContribution;  // Media contribution on top
+
+        // Update the chart
+        olsChart.update();
+    }
+
+    // Reset button function
+    function resetSliders() {
+    
+        // Reset the sliders to default values
+        document.getElementById('tsCoefficient').value = 2;
+        document.getElementById('tsBase').value = 10000;
+        
+        // Update the displayed values
+        document.getElementById('bValue').textContent = 2;
+        document.getElementById('baseValue').textContent = 10000;
+
+        // Update the chart
+        updateChart2();
+    }
+
+    // Attach event listeners to sliders
+    document.getElementById('tsCoefficient').addEventListener('input', updateChart2);
+    document.getElementById('tsBase').addEventListener('input', updateChart2);
+
+    // Attach event listener to reset button
+    document.getElementById('resetButton2').addEventListener('click', resetSliders);
+</script>
+
+```
+
+
+#### Adstock
+
+In this example adstock can be seen impacting _Sales_. The impact of _Media Spend_ lasts for a few weeks after after the spending took place. Use the slider to see how the impact of media can change depending on the percentage of impact retained each week. 
+
+```{=html}
+
+<div style="display:flex;flex-direction:row">
+  <div style="display:flex;flex-direction:column;justify-content:center; margin-right: 20px;">
+    <div>
+      <label for="rate">Adstock Rate: <span id="rateValue">50%</span></label>
+      <input type="range" id="rate" name="rate" min="0" max="1" step="0.1" value="0.5">
+    </div>
+  </div>
+  <canvas id="adstockChart" width="600" height="400"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Media spend data
+    const mediaSpend2 = [0, 0, 0, 0, 20000, 0, 0, 0, 0, 10000, 0, 0, 0 , 0 ];
+
+    // Base value
+    const baseValue = 10000;
+
+    // Initialize adstock rate
+    let rate = 0.5;
+
+    // Adstock function
+    function adstock(media, rate) {
+        let result = [];
+        let carryover = 0;
+        for (let i = 0; i < media.length; i++) {
+            const contribution = media[i] + carryover * rate;
+            result.push(contribution);
+            carryover = contribution;
+        }
+        return result;
+    }
+
+    // Calculate media contribution using adstock
+    function calculateMediaContribution(rate) {
+        return adstock(mediaSpend2, rate);
+    }
+
+    // Sales = base + 2 * adstock(media)
+    const sales = calculateMediaContribution(0.5).map(contribution => baseValue + contribution);
+
+    // Initial media contribution
+    let mediaContribution = calculateMediaContribution(rate);
+
+    // Create the Chart
+    const ctx3 = document.getElementById('adstockChart').getContext('2d');
+    const adstockChart = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: Array.from({ length: mediaSpend.length }, (_, i) => `Week ${i+1}`),
+            datasets: [
+                {
+                    label: 'Base',
+                    data: Array(mediaSpend2.length).fill(baseValue),
+                    backgroundColor: 'rgba(255, 159, 64, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Media Contribution',
+                    data: mediaContribution,
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Sales',
+                    data: sales,
+                    type: 'line',
+                    fill: false,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true,
+                    grid:{display:false}
+                },
+                y: {
+                    beginAtZero: true,
+                    stacked: true,
+                    min: 0,
+                    max: 40000,
+                    title: {
+                        display: true,
+                        text: 'Sales'
+                    },
+                    grid:{display:false}
+                }
+            }
+        }
+    });
+
+    // Update the chart based on the slider value
+    function updateChart3() {
+        // Get updated rate value
+        rate = parseFloat(document.getElementById('rate').value);
+        document.getElementById('rateValue').textContent = (rate * 100) + "%";
+
+        // Recalculate media contribution
+        mediaContribution = calculateMediaContribution(rate);
+
+        // Update chart data for media contribution (base and sales remain constant)
+        adstockChart.data.datasets[1].data = mediaContribution;
+
+        // Update the chart
+        adstockChart.update();
+    }
+
+    // Attach event listener to the rate slider
+    document.getElementById('rate').addEventListener('input', updateChart3);
+});
+</script>
+
+
+```
+
+
+#### Diminishing Returns
+
+A simple approach for measuring diminishing returns follows the following transformation:
+
+$$ Coefficient * (1 - e^{-\frac{Media Spend}{\text{Diminishing Returns Rate}}}) $$
+The two charts bellow illustrate how coefficients and diminishing returns work together to achieve the right model fit.
+
+
+```{=html}
+<div style="display:flex;flex-direction:row">
+  <div style="display:flex;flex-direction:column;justify-content:center; margin-right: 20px;">
+    <div style="display:flex;flex-direction:column;justify-content:center;">
+      <label for="rateDR">Diminishing Returns Rate: <span id="rateValueDR">20000</span></label>
+      <input type="range" id="rateDR" name="rateDR" min="1000" max="50000" step="1000" value="20000">
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center; margin-top:20px">
+      <label for="coefficient">Coefficient: <span id="coefficientValue">10000</span></label>
+      <input type="range" id="coefficient" name="coefficient" min="1000" max="50000" step="1000" value="10000">
+    </div>
+  </div>
+  <div style="display:flex; flex-direction:column">
+    <canvas id="mediaContributionChart" width="500" height="200"></canvas>
+    <canvas id="diminishingChart" width="500" height="200"></canvas>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Media spend data
+    const mediaSpend = [0, 0, 0, 0, 20000, 0, 0, 5000, 0, 10000, 0, 0, 0, 0];
+
+    // Base value
+    const baseValue = 10000;
+
+    // Initialize diminishing returns rate and coefficient
+    let rate = 30000;
+    let coefficient = 20000;
+
+    // Diminishing Returns function: 1 - exp(-x / rate)
+    function diminishingReturns(media, rate) {
+        return media.map(value => 1 - Math.exp(-value / rate));
+    }
+
+    // Calculate media contribution using diminishing returns and coefficient
+    function calculateMediaContribution(rate, coefficient) {
+        return diminishingReturns(mediaSpend, rate).map(contribution => contribution * coefficient);
+    }
+
+    // Calculate sales = base + coefficient * diminishing_returns(mediaSpend)
+    function calculateSales(rate, coefficient) {
+        return calculateMediaContribution(rate, coefficient).map(contribution => baseValue + contribution);
+    }
+
+    // Initial media contribution and sales
+    let mediaContribution = calculateMediaContribution(rate, coefficient);
+    let sales = calculateSales(rate, coefficient);
+
+    // First Chart: Bar and Line Chart
+    const ctxDR = document.getElementById('diminishingChart').getContext('2d');
+    const diminishingChart = new Chart(ctxDR, {
+        type: 'bar',
+        data: {
+            labels: Array.from({ length: mediaSpend.length }, (_, i) => `Week ${i+1}`),
+            datasets: [
+                {
+                    label: 'Base',
+                    data: Array(mediaSpend.length).fill(baseValue),
+                    backgroundColor: 'rgba(255, 159, 64, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Media Contribution',
+                    data: mediaContribution,
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                    stack: 'Stack 0'
+                },
+                {
+                    label: 'Sales',
+                    data: sales,
+                    type: 'line',
+                    fill: false,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true,
+                    grid:{display:false}
+                },
+                y: {
+                    beginAtZero: true,
+                    stacked: true,
+                    min: 0,
+                    max: 30000,
+                    title: {
+                        display: true,
+                        text: 'Sales'
+                    },
+                    grid:{display:false}
+                }
+            }
+        }
+    });
+
+    // Second Chart: Media Spend vs Media Contribution
+    const ctxContribution = document.getElementById('mediaContributionChart').getContext('2d');
+    const mediaSpendRange = Array.from({ length: 20 }, (_, i) => i * 1000); // Range of media spend from 0 to 40K
+    let mediaContributionRange = diminishingReturns(mediaSpendRange, rate).map(contribution => contribution * coefficient);
+
+    const mediaContributionChart = new Chart(ctxContribution, {
+        type: 'line',
+        data: {
+            labels: mediaSpendRange,
+            datasets: [{
+                label: 'Media Contribution (Diminishing Returns)',
+                data: mediaContributionRange,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: false,
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(75, 192, 192, 1)'
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Media Spend'
+                    },
+                    grid:{display:false}
+                },
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Media Contribution'
+                    },
+                    grid:{display:false}
+                }
+            }
+        }
+    });
+
+    // Update the charts based on the slider values
+    function updateCharts() {
+        // Get updated rate and coefficient values
+        rate = parseFloat(document.getElementById('rateDR').value);
+        coefficient = parseFloat(document.getElementById('coefficient').value);
+
+        // Update the displayed values for rate and coefficient
+        document.getElementById('rateValueDR').textContent = rate;
+        document.getElementById('coefficientValue').textContent = coefficient;
+
+        // Recalculate media contribution and sales
+        mediaContribution = calculateMediaContribution(rate, coefficient);
+
+        // Recalculate media contribution range for the second chart
+        mediaContributionRange = diminishingReturns(mediaSpendRange, rate).map(contribution => contribution * coefficient);
+
+        // Update chart data for media contribution
+        diminishingChart.data.datasets[1].data = mediaContribution;
+
+        // Update second chart (Media Spend vs Media Contribution)
+        mediaContributionChart.data.datasets[0].data = mediaContributionRange;
+
+        // Update both charts
+        diminishingChart.update();
+        mediaContributionChart.update();
+    }
+
+    // Attach event listeners to the rate and coefficient sliders
+    document.getElementById('rateDR').addEventListener('input', updateCharts);
+    document.getElementById('coefficient').addEventListener('input', updateCharts);
+});
+</script>
+
+
+```
+
+
+## Conclusion
+
+Hopefully this article has clarified a few key concepts of MMM:
+
+- Regression
+- Adstock
+- Diminishing Returns
+
+The examples we explored were extremely simplified models with just one variable impacting _Sales_. A complete MMM model will include several variables and will estimate several parameters (e.g. coefficient, adstock, diminishing returns) for each variable. MMM practitioners will use sophisticated tools ranging from bespoke software to programming languages like _R_ and _Python_ to handle the complexity of estimating all these parameters at once. Nevertheless, the same concepts illustrated in this article are at the base of all MMM projects. 

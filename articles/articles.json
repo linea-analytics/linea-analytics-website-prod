@@ -1,0 +1,33 @@
+[
+    {
+      "title": "The Fundamentals of Marketing Mix Modeling",
+      "slug": "the-fundamentals-of-marketing-mix-modeling",
+      "author": "Claudio Paladini",
+      "date": "2024-10-01",
+      "image": "/articles/mmm_fundamentals/img/thumbnail.png",
+      "url": "/articles/mmm_fundamentals/article.html",
+      "category": "Tutorial",
+      "contentFilename": "content.html"
+    },
+    {
+      "title": "MMM in 2025",
+      "slug": "mmm-in-2025",
+      "author": "Claudio Paladini",
+      "date": "2024-09-15",
+      "image": "/articles/mmm_2024/img/thumbnail.png",
+      "url": "/articles/mmm_2024/article.html",
+      "category": "Article",
+      "contentFilename": "content.html"
+    },
+    {
+      "title": "Challenges in MMM",
+      "slug": "challenges-in-mmm",
+      "author": "Claudio Paladini",
+      "date": "2024-09-15",
+      "image": "/articles/mmm_challenges/img/thumbnail.png",
+      "url": "/articles/mmm_challenges/article.html",
+      "category": "Article",
+      "contentFilename": "content.html"
+    }
+  ]
+  
