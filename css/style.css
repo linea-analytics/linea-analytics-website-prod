@@ -1428,3 +1428,61 @@ h3.quote::before {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 5));
+  }
+}
+.carosel-slider {
+/*   background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.carosel-slider::before, .carosel-slider::after {
+/*   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.carosel-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.carosel-slider::before {
+  left: 0;
+  top: 0;
+}
+.carosel-slider .slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  width: calc(350px * 10);
+}
+.carosel-slider .slide {
+  height: 100px;
+  width: 350px;
+  padding-left: 20px;
+}
+
+.carosel-slider .slide img{
+  width: 200px;
+  height: 100px;
+  aspect-ratio: 1;
+  margin: 20px auto;
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+}
+
+.carosel-slider .slide img.invert-col{
+  filter: grayscale(100%) invert(100%);
+}
