@@ -648,6 +648,28 @@ ul.dropdown-menu li {
   background-size: cover;
 }
 
+.bg-right {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  min-height: 650px;
+  background: url("../images/about/home-8.jpg") no-repeat;
+  background-size: cover;
+}
+
+.bg-left {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  min-height: 650px;
+  background: url("../images/about/home-8.jpg") no-repeat;
+  background-size: cover;
+}
+
 .about-content {
   padding: 20px 0px 0px 80px;
 }
@@ -1326,9 +1348,12 @@ h3.quote::before {
     font-size: 56px;
     line-height: 70px;
   }
+  .bg-right,
+  .bg-left,
   .bg-about {
     display: none;
   }
+  
   section.about {
     border: 1px solid #dee2e6;
     border-left: 0;
@@ -1345,6 +1370,9 @@ h3.quote::before {
   .navbar-toggler {
     color: #fff;
   }
+  
+  .bg-right,
+  .bg-left,
   .bg-about {
     display: none;
   }
@@ -1404,6 +1432,9 @@ h3.quote::before {
     font-size: 28px;
     line-height: 46px;
   }
+  
+  .bg-right,
+  .bg-left,
   .bg-about {
     display: none;
   }
