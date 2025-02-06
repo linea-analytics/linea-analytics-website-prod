@@ -654,7 +654,7 @@ ul.dropdown-menu li {
   right: 0px;
   top: 0px;
   width: 50%;
-  min-height: 650px;
+  min-height: 475Px;
   background: url("../images/about/home-8.jpg") no-repeat;
   background-size: cover;
 }
@@ -1469,6 +1469,7 @@ h3.quote::before {
   }
 }
 .carosel-slider {
+  background-color:  rgb(41, 202, 171);
 /*   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
   height: 150px;
@@ -1511,7 +1512,8 @@ h3.quote::before {
   aspect-ratio: 1;
   margin: 20px auto;
   object-fit: contain;
-  /* filter: grayscale(100%); */
+  filter: grayscale(100%) contrast(150%);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))');
 }
 
 .carosel-slider .slide img.invert-col{
