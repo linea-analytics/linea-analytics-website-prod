@@ -172,6 +172,10 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: #f5f8f9;
 }
 
+.bg-green {
+  background: rgb(41, 202, 171);
+}
+
 .bg-primary {
   background: rgb(41, 202, 171);
 }
@@ -649,25 +653,15 @@ ul.dropdown-menu li {
 }
 
 .bg-right {
-  position: absolute;
   content: "";
-  right: 0px;
-  top: 0px;
   width: 50%;
-  min-height: 475Px;
+  min-height: 100%;
   background: url("../images/about/home-8.jpg") no-repeat;
   background-size: cover;
 }
 
 .bg-left {
-  position: absolute;
-  content: "";
-  left: 0px;
-  top: 0px;
-  width: 50%;
-  min-height: 650px;
-  background: url("../images/about/home-8.jpg") no-repeat;
-  background-size: cover;
+  background-size:cover;
 }
 
 .about-content {
@@ -1351,7 +1345,7 @@ h3.quote::before {
   .bg-right,
   .bg-left,
   .bg-about {
-    display: none;
+    display: none !important;
   }
   
   section.about {
@@ -1374,7 +1368,7 @@ h3.quote::before {
   .bg-right,
   .bg-left,
   .bg-about {
-    display: none;
+    display: none  !important;
   }
   .slider .block h1 {
     font-size: 48px;
@@ -1436,7 +1430,7 @@ h3.quote::before {
   .bg-right,
   .bg-left,
   .bg-about {
-    display: none;
+    display: none  !important;
   }
   .p-5 {
     padding: 2rem !important;
