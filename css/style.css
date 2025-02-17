@@ -172,22 +172,30 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: #f5f8f9;
 }
 
-.bg-green {
-  background: rgb(41, 202, 171);
+.bg-grey {
+  background: rgb(182, 182, 182);
 }
 
+.bg-gold {
+  background: rgb(255, 221, 0);
+}
+
+.bg-green,
 .bg-primary {
-  background: rgb(41, 202, 171);
+  background: rgb(41, 202, 171);!
 }
 
+.bg-green-dark,
 .bg-primary-dark {
-  background: rgb(32.3950617284, 159.6049382716, 135.1111111111);
+  background: rgb(32.3950617284, 159.6049382716, 135.1111111111);!
 }
 
+.bg-green-darker,
 .bg-primary-darker {
-  background: rgb(23.7901234568, 117.2098765432, 99.2222222222);
+  background: rgb(23.7901234568, 117.2098765432, 99.2222222222);!
 }
 
+.bg-black,
 .bg-dark {
   background: rgb(25, 27, 28);
 }
@@ -1018,6 +1026,10 @@ h3.quote::before {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.border-bottom{
+  border-bottom: 1px solid #dedede;
+}
+
 .blog-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -1115,6 +1127,7 @@ h3.quote::before {
   margin-bottom: 25px;
   text-transform: uppercase;
 }
+
 
 .next-prev {
   border-bottom: 1px solid #dedede;
@@ -1215,6 +1228,12 @@ h3.quote::before {
 .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form .btn-transparent, .comment-reply-form .btn-small {
   height: auto;
 }
+
+.table-custom-spacing {
+  border-collapse: separate;
+  border-spacing: 2px; /* Adjust space as needed */
+}
+
 
 .widget {
   margin-bottom: 30px;
