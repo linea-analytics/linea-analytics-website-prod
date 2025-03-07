@@ -1361,11 +1361,6 @@ h3.quote::before {
     font-size: 56px;
     line-height: 70px;
   }
-  .bg-right,
-  .bg-left,
-  .bg-about {
-    display: none !important;
-  }
   
   section.about {
     border: 1px solid #dee2e6;
