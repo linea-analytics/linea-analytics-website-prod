@@ -114,18 +114,19 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 .btn-main, .btn-small, .btn-transparent {
   background: rgb(41, 202, 171);
-  color: #fff;
+  font-weight: 600;
+  color: #191b1c;
   transition: all 0.2s ease;
 }
 .btn-main:hover, .btn-small:hover, .btn-transparent:hover {
   background: rgb(32.3950617284, 159.6049382716, 135.1111111111);
-  color: #fff;
+  color: #191b1c;
 }
 
 .btn-solid-border {
   border: 2px solid rgb(41, 202, 171);
   background: transparent;
-  color: rgb(25, 27, 28);
+  color: #191b1c;
 }
 .btn-solid-border:hover {
   border: 2px solid rgb(41, 202, 171);
@@ -195,9 +196,12 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: rgb(23.7901234568, 117.2098765432, 99.2222222222);!
 }
 
-.bg-black,
-.bg-dark {
-  background: rgb(25, 27, 28);
+.bg-black{
+  background: #191b1c !important;
+}
+
+.bg-dark{
+  background: #111c28 !important;
 }
 
 .bg-gradient {
@@ -263,11 +267,11 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color {
-  color: rgb(41, 202, 171);
+  color: #29caab;
 }
 
 .text-black {
-  color: rgb(25, 27, 28);
+  color: #191b1c;
 }
 
 .text-color2 {
