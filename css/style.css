@@ -14,6 +14,10 @@ html {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   scrollbar-width: none; /* Firefox */
 }
@@ -175,6 +179,10 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 .bg-grey {
   background: rgb(182, 182, 182);
+}
+
+.bg-light-grey{
+  background: #f8f9fa !important
 }
 
 .bg-gold {
