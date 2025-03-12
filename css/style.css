@@ -687,6 +687,8 @@ ul.dropdown-menu li {
 
 .bg-left {
   min-height: 400px;
+  background-origin: content-box;
+  padding: 20px;
   background-size:cover;
 }
 
