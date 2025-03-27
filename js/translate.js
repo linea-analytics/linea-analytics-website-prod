@@ -1,37 +1,44 @@
-function translateData(language, csvData) {
 
+
+function translateData(language, csvData) {
     if (!['eng', 'ita', 'de'].includes(language)) {
         console.error(`Unsupported language: ${language}`);
         return;
     }
 
-    const rows = csvData.trim().split('\n');
-    const headers = rows[0]
-    .trim()          // remove trailing carriage return/spaces
-    .split(',')
-    .map(h => h.trim()); // remove any internal spacing
+    Papa.parse(csvData, {
+        header: true,
+        skipEmptyLines: true,       // optional: skip empty lines
+        complete: (results) => {
+            const rows = results.data;
 
-    const classIndex = headers.indexOf('html-class');
-    const langIndex = headers.indexOf(language);
-
-
-    if (classIndex === -1 || langIndex === -1) {
-        console.error('CSV missing required columns');
-        return;
-    }
-
-    for (let i = 1; i < rows.length; i++) {
-        const cols = rows[i].split(',');
-        const className = cols[classIndex];
-        const textValue = cols[langIndex];
-
-        if (className && textValue) {
-            const elements = document.getElementsByClassName(className);
-            for (const el of elements) {
-                el.textContent = textValue;
+            // Quick check to see if the CSV includes the needed columns
+            if (rows.length === 0 || !rows[0]['html-class'] || !rows[0][language]) {
+                console.error('CSV missing required columns (e.g. "html-class" or selected language).');
+                return;
             }
+
+            // Iterate through each row (each row is an object, e.g.: { "html-class": "headline", "eng": "Hello" })
+            for (const row of rows) {
+                // Row keys correspond to the CSV headers (e.g. row["html-class"], row["eng"], row["ita"]...)
+                const className = row['html-class'];
+                const textValue = row[language];
+
+                if (className && textValue) {
+                    const elements = document.getElementsByClassName(className);
+                    for (const el of elements) {
+                        el.textContent = textValue;
+                    }
+                }
+            }
+
+            // Save the user’s language choice
+            localStorage.setItem('userLang', language);
+        },
+        error: (err) => {
+            console.error('Error parsing CSV:', err);
         }
-    }
+    });
 }
 
 function translateContent(language) {
@@ -41,32 +48,3 @@ function translateContent(language) {
             translateData(language, csvData);
         });
 }
-
-fetch('https://api.ipregistry.co/?key=tryout')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok: " + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log("Country data:", data);
-
-        // Extract the country code
-        const countryCode = data.location?.country?.code || null;
-        console.log("Detected country code:", countryCode);
-
-        // Example translation logic
-        if (countryCode === 'IT') {
-            translateContent('ita');
-        } else if (countryCode === 'DE') {
-            translateContent('de');
-        } else {
-            translateContent('eng');
-        }
-    })
-    .catch(error => {
-        console.error("Failed to fetch location from ipregistry:", error);
-        // Fallback logic, default to English, for example
-        translateContent('eng');
-    });
