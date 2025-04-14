@@ -9,19 +9,35 @@
                         <a href="https://github.com/linea-analytics/" aria-label="github"><i
                                 class="fab fa-github"></i></a>
                         <a href="mailto:info@linea-analytics.com"><i
-                            class="fas fa-envelope mr-2"></i><span>info@linea-analytics.com</span></a>
+                                class="fas fa-envelope mr-2"></i><span>info@linea-analytics.com</span></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 text-center text-lg-right text-md-right">
                     <div class="header-top-info mb-2 mb-md-0">
-                    </div>
-                    <div class="dropdown d-inline-block">
-                        <div class="bg-dark dropdown-toggle">&#127760 Language</div>
-                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <a class="dropdown-item" href="#" onclick="translateContent('eng')">English</a>
-                            <a class="dropdown-item" href="#" onclick="translateContent('ita')">Italian</a>
-                            <a class="dropdown-item" href="#" onclick="translateContent('de')">German</a>
-                        </div>
+                        <!-- <div class="dropdown">
+                            <a class="color-green dropdown-toggle" href="#" id="dropdown07"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>🌐 Language</span> </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown07">
+                                <li><a class="dropdown-item" href="#" onclick="translateContent('eng')">English</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="translateContent('ita')">Italian</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="translateContent('de')">German</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="custom-dropdown-wrapper">
+                            <!-- This button toggles the dropdown -->
+                            <button class="custom-dropdown-toggle" onclick="toggleLangDropdown()">
+                              🌐 Language
+                            </button>
+                          
+                            <!-- The dropdown content, initially hidden via inline style or CSS -->
+                            <div id="langDropdown" class="custom-dropdown-content" style="display: none;">
+                              <ul>
+                                <li><a href="#" onclick="translateContent('eng')">English</a></li>
+                                <li><a href="#" onclick="translateContent('ita')">Italian</a></li>
+                                <li><a href="#" onclick="translateContent('de')">German</a></li>
+                              </ul>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -49,21 +65,23 @@
                                     <a class="nav-link tc73" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item dropdown" data-page="solutions">
-                                    <a class="nav-link" href="full-service.html"><span class="tc74">Solutions</span> <i
-                                            class="fas fa-chevron-down small"></i></a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
-                                        <li><a class="dropdown-item tc75" href="measurement-platform.html">Platform</a></li>
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown06"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                            class="tc74">Solutions</span> </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown06">
+                                        <li><a class="dropdown-item tc75" href="measurement-platform.html">Platform</a>
+                                        </li>
                                         <li><a class="dropdown-item tc76" href="full-service.html">Full Service</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item" data-page="about"><a class="nav-link tc77" href="about.html">About</a>
+                                <li class="nav-item" data-page="about"><a class="nav-link tc77"
+                                        href="about.html">About</a>
                                 </li>
                                 <li class="nav-item" data-page="blog"><a class="nav-link tc78" href="blog.html">Our
                                         Thinking</a></li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle tc79" href="#" id="dropdown05" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Clients <i
+                                    <a class="nav-link dropdown-toggle tc79" href="#" id="dropdown05"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clients <i
                                             class="fas fa-chevron-down small"></i></a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown05">
                                         <li><a class="dropdown-item tc80" href="https://app.linea-analytics.com/">Client
