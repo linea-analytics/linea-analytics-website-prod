@@ -31,6 +31,13 @@ async function loadArticle() {
     // Create temp container to manipulate HTML
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = articleHtml;
+    // Fix image paths relative to the Markdown file
+    tempDiv.querySelectorAll('img').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (src && !src.startsWith('http') && !src.startsWith('/')) {
+        img.src = `articles/${folder}/${src}`;
+      }
+    });
 
     // Find all widget divs
     const widgetDivs = tempDiv.querySelectorAll('div[id$="-widget"]');
@@ -57,6 +64,7 @@ async function loadArticle() {
             widgetContainer.removeChild(node);
           } else {
             div.appendChild(node);
+            div.classList.add('blog-widget');
           }
         }
 

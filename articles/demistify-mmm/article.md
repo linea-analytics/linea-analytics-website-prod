@@ -6,8 +6,8 @@ A question we are often asked is “How do you build an MMM model?” At the cor
 
 MMM models build a statistical relationship between changes in the:
 
-* Dependent variables - Sales, New customers, Web Visits etc.
-* Independent variables - media spend, pricing, and economic factors
+- Dependent variables - Sales, New customers, Web Visits etc.
+- Independent variables - media spend, pricing, and economic factors
 
 The MMM model aims to calculate the coefficient of the independent variables. Let's look at one of the most common model-building methods used - ordinary least squares.
 
