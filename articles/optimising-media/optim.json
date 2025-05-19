@@ -1,0 +1,1010 @@
+[
+  {
+    "category": "Generic SEA",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 0
+  },
+  {
+    "category": "Social",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 0
+  },
+  {
+    "category": "Display",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 0
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 0
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 500,
+    "channel_uplift": 1000,
+    "budget": 500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 500,
+    "channel_uplift": 1000,
+    "budget": 1000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 500,
+    "channel_uplift": 540,
+    "budget": 1000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 1000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 1000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 500,
+    "channel_uplift": 1000,
+    "budget": 1500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 500,
+    "channel_uplift": 540,
+    "budget": 1500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 1500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 1500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1000,
+    "channel_uplift": 1500,
+    "budget": 2000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 500,
+    "channel_uplift": 540,
+    "budget": 2000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 2000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 2000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1000,
+    "channel_uplift": 1500,
+    "budget": 2500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1000,
+    "channel_uplift": 900,
+    "budget": 2500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 2500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 2500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 3000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1000,
+    "channel_uplift": 900,
+    "budget": 3000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 3000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 0,
+    "channel_uplift": 0,
+    "budget": 3000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 3500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1000,
+    "channel_uplift": 900,
+    "budget": 3500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 3500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 500,
+    "channel_uplift": 285.5748,
+    "budget": 3500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 4000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1000,
+    "channel_uplift": 900,
+    "budget": 4000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 4000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 1000,
+    "channel_uplift": 545.1882,
+    "budget": 4000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 4500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 4500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 500,
+    "channel_uplift": 500,
+    "budget": 4500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 1000,
+    "channel_uplift": 545.1882,
+    "budget": 4500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 5000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 5000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 5000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 1000,
+    "channel_uplift": 545.1882,
+    "budget": 5000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 5500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 5500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 5500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 1500,
+    "channel_uplift": 782.2266,
+    "budget": 5500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 1500,
+    "channel_uplift": 1800,
+    "budget": 6000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 6000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 6000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 2000,
+    "channel_uplift": 999.5117,
+    "budget": 6000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 6500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 6500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 6500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 2000,
+    "channel_uplift": 999.5117,
+    "budget": 6500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 7000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 1500,
+    "channel_uplift": 1157.1429,
+    "budget": 7000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 7000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 2500,
+    "channel_uplift": 1199.4141,
+    "budget": 7000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 7500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2000,
+    "channel_uplift": 1350,
+    "budget": 7500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 7500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 2500,
+    "channel_uplift": 1199.4141,
+    "budget": 7500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 8000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2000,
+    "channel_uplift": 1350,
+    "budget": 8000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 8000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 3000,
+    "channel_uplift": 1383.9393,
+    "budget": 8000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 8500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2000,
+    "channel_uplift": 1350,
+    "budget": 8500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 8500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 3500,
+    "channel_uplift": 1554.796,
+    "budget": 8500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 9000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2000,
+    "channel_uplift": 1350,
+    "budget": 9000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1000,
+    "channel_uplift": 750,
+    "budget": 9000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 4000,
+    "channel_uplift": 1713.4487,
+    "budget": 9000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 9500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2000,
+    "channel_uplift": 1350,
+    "budget": 9500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 9500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 4000,
+    "channel_uplift": 1713.4487,
+    "budget": 9500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 10000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 10000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 10000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 4000,
+    "channel_uplift": 1713.4487,
+    "budget": 10000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2000,
+    "channel_uplift": 2000,
+    "budget": 10500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 10500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 10500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 4500,
+    "channel_uplift": 1861.1598,
+    "budget": 10500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 11000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 11000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 11000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 4500,
+    "channel_uplift": 1861.1598,
+    "budget": 11000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 11500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 11500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 11500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 5000,
+    "channel_uplift": 1999.0234,
+    "budget": 11500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 12000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 12000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 12000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 5500,
+    "channel_uplift": 2127.9927,
+    "budget": 12000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 12500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 2500,
+    "channel_uplift": 1500,
+    "budget": 12500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 12500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 6000,
+    "channel_uplift": 2248.9014,
+    "budget": 12500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 13000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 13000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 13000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 6000,
+    "channel_uplift": 2248.9014,
+    "budget": 13000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 2500,
+    "channel_uplift": 2142.8571,
+    "budget": 13500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 13500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 13500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 6500,
+    "channel_uplift": 2362.4822,
+    "budget": 13500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 14000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 14000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 14000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 6500,
+    "channel_uplift": 2362.4822,
+    "budget": 14000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 14500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 14500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 14500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 7000,
+    "channel_uplift": 2469.3819,
+    "budget": 14500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 15000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 15000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 1500,
+    "channel_uplift": 900,
+    "budget": 15000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 7500,
+    "channel_uplift": 2570.173,
+    "budget": 15000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 15500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3000,
+    "channel_uplift": 1620,
+    "budget": 15500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 15500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 7500,
+    "channel_uplift": 2570.173,
+    "budget": 15500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 16000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3500,
+    "channel_uplift": 1718.1818,
+    "budget": 16000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 16000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 7500,
+    "channel_uplift": 2570.173,
+    "budget": 16000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 16500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3500,
+    "channel_uplift": 1718.1818,
+    "budget": 16500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 16500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 8000,
+    "channel_uplift": 2665.3646,
+    "budget": 16500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 17000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3500,
+    "channel_uplift": 1718.1818,
+    "budget": 17000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 17000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 8500,
+    "channel_uplift": 2755.4107,
+    "budget": 17000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3000,
+    "channel_uplift": 2250,
+    "budget": 17500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3500,
+    "channel_uplift": 1718.1818,
+    "budget": 17500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 17500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 9000,
+    "channel_uplift": 2840.7175,
+    "budget": 17500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 18000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 3500,
+    "channel_uplift": 1718.1818,
+    "budget": 18000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 18000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 9000,
+    "channel_uplift": 2840.7175,
+    "budget": 18000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 18500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 4000,
+    "channel_uplift": 1800,
+    "budget": 18500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 18500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 9000,
+    "channel_uplift": 2840.7175,
+    "budget": 18500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 19000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 4000,
+    "channel_uplift": 1800,
+    "budget": 19000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 19000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 9500,
+    "channel_uplift": 2921.6496,
+    "budget": 19000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 19500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 4000,
+    "channel_uplift": 1800,
+    "budget": 19500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2000,
+    "channel_uplift": 1000,
+    "budget": 19500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 10000,
+    "channel_uplift": 2998.5352,
+    "budget": 19500
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 20000
+  },
+  {
+    "category": "Social",
+    "channel_spend": 4000,
+    "channel_uplift": 1800,
+    "budget": 20000
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2500,
+    "channel_uplift": 1071.4286,
+    "budget": 20000
+  },
+  {
+    "category": "TV",
+    "channel_spend": 10000,
+    "channel_uplift": 2998.5352,
+    "budget": 20000
+  },
+  {
+    "category": "Generic SEA",
+    "channel_spend": 3500,
+    "channel_uplift": 2333.3333,
+    "budget": 20500
+  },
+  {
+    "category": "Social",
+    "channel_spend": 4500,
+    "channel_uplift": 1869.2308,
+    "budget": 20500
+  },
+  {
+    "category": "Display",
+    "channel_spend": 2500,
+    "channel_uplift": 1071.4286,
+    "budget": 20500
+  },
+  {
+    "category": "TV",
+    "channel_spend": 10000,
+    "channel_uplift": 2998.5352,
+    "budget": 20500
+  }
+]
