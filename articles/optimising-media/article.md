@@ -10,7 +10,7 @@ In an MMM model, we not only calculate the adstock we also calculate the diminis
 
 The two charts bellow illustrate how coefficients and diminishing returns work together to achieve the right model fit.
 
-<div id="ols-widget"></div>
+<div id="dimrets-widget"></div>
 
 ## Budget optimisation
 
