@@ -126,5 +126,13 @@
     "author": "Claudio Paladini",
     "date": "2025-06-24",
     "category": "Article"
+  }   ,
+  {
+    "title": "The Different Ways to Measure Adstock (Memory effect) in MMM",
+    "teaser": "Interactive adstock widgets",
+    "folder": "adstocks",
+    "author": "Claudio Paladini",
+    "date": "2025-07-07",
+    "category": "Article"
   }  
 ]
