@@ -57,7 +57,6 @@
 			}, 300);
 		});
 	}
-
 	$(window).on('scroll', function () {
 		//.Scroll to top show/hide
 		if ($('#scroll-to-top').length) {
@@ -70,6 +69,7 @@
 			}
 		}
 	});
+
 	// scroll-to-top
 	if ($('#scroll-to-top').length) {
 		$('#scroll-to-top').on('click', function () {
@@ -133,5 +133,33 @@
 			console.error('Failed to load articles:', error);
 		}
 	});
+
+	// Fadein
+	(function () {
+		const els = document.querySelectorAll('.reveal');
+		if (!('IntersectionObserver' in window)) {
+			// very old browsers: just show everything
+			els.forEach(el => el.classList.add('reveal--visible'));
+			return;
+		}
+
+		const io = new IntersectionObserver((entries, obs) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const el = entry.target;
+					const delay = el.dataset.delay || '0ms';
+					el.style.transitionDelay = delay;
+					el.classList.add('reveal--visible');
+					obs.unobserve(el); // remove this to allow hide-on-exit behavior
+				}
+			});
+		}, {
+			root: null,
+			threshold: 0.1,          // fire when ~10% is visible
+			rootMargin: '0px 0px -10% 0px' // start a bit before fully in view
+		});
+
+		els.forEach(el => io.observe(el));
+	})();
 
 })(jQuery);

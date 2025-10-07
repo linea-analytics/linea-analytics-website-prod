@@ -958,6 +958,22 @@ ul.dropdown-menu li {
   height: 450px;
 }
 
+
+/* start hidden + slightly shifted */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s ease-out, transform .6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* becomes visible when the JS adds this */
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+
 /*=================================================================
   Latest Posts
 ==================================================================*/
