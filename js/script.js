@@ -161,6 +161,47 @@
 
 		els.forEach(el => io.observe(el));
 	})();
-	
+
+	// Growing number
+	document.addEventListener("DOMContentLoaded", () => {
+		const counters = document.querySelectorAll(".countup");
+		const speed = 70; // smaller = faster
+
+		const animate = (el) => {
+			const target = +el.dataset.target;
+			const isCurrency = el.textContent.trim().includes("£");
+			const isPercent = el.textContent.trim().includes("%");
+			let count = 0;
+			const increment = target / speed;
+
+			const update = () => {
+				count += increment;
+				if (count < target) {
+					el.textContent =
+						(isCurrency ? "£" : "") + Math.floor(count).toLocaleString() + (isPercent ? "%" : "");
+					requestAnimationFrame(update);
+				} else {
+					el.textContent =
+						(isCurrency ? "£" : "") + target.toLocaleString() + (isPercent ? "%" : "");
+				}
+			};
+			update();
+		};
+
+		// Intersection Observer to trigger animation when visible
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+						entry.target.classList.add("counted");
+						animate(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.4 } // start when 40% visible
+		);
+
+		counters.forEach(counter => observer.observe(counter));
+	});
 
 })(jQuery);

@@ -266,7 +266,7 @@
 	<!-- section header END -->
 
 	<!-- Section square left Start -->
-	<section class="container-fluid mt-5 mb-5 pt-5 pb-5 reveal">
+	<section class="container-fluid mt-5 mb-5 pt-5 p pb-5 reveal">
 		<div class="row" style="min-height: 450px;">
 			<div class="col-md-6 d-flex justify-content-center align-items-center bg-light">
 				<div class="about-item p-5">
@@ -457,51 +457,6 @@
 						</div>
 					</div>
 				</div>
-
-				<script>
-					document.addEventListener("DOMContentLoaded", () => {
-						const counters = document.querySelectorAll(".countup");
-						const speed = 70; // smaller = faster
-
-						const animate = (el) => {
-							const target = +el.dataset.target;
-							const isCurrency = el.textContent.trim().includes("£");
-							const isPercent = el.textContent.trim().includes("%");
-							let count = 0;
-							const increment = target / speed;
-
-							const update = () => {
-								count += increment;
-								if (count < target) {
-									el.textContent =
-										(isCurrency ? "£" : "") + Math.floor(count).toLocaleString() + (isPercent ? "%" : "");
-									requestAnimationFrame(update);
-								} else {
-									el.textContent =
-										(isCurrency ? "£" : "") + target.toLocaleString() + (isPercent ? "%" : "");
-								}
-							};
-							update();
-						};
-
-						// Intersection Observer to trigger animation when visible
-						const observer = new IntersectionObserver(
-							(entries) => {
-								entries.forEach(entry => {
-									if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
-										entry.target.classList.add("counted");
-										animate(entry.target);
-									}
-								});
-							},
-							{ threshold: 0.4 } // start when 40% visible
-						);
-
-						counters.forEach(counter => observer.observe(counter));
-					});
-				</script>
-
-
 			</div>
 
 			<!-- Row 2 -->
