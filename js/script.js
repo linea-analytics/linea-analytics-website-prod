@@ -162,7 +162,7 @@
 		els.forEach(el => io.observe(el));
 	})();
 
-	// Growing number
+	// Growing number (showing £500M or %)
 	document.addEventListener("DOMContentLoaded", () => {
 		const counters = document.querySelectorAll(".countup");
 		const speed = 70; // smaller = faster
@@ -177,18 +177,28 @@
 			const update = () => {
 				count += increment;
 				if (count < target) {
-					el.textContent =
-						(isCurrency ? "£" : "") + Math.floor(count).toLocaleString() + (isPercent ? "%" : "");
+					if (isCurrency) {
+						el.textContent = "£" + Math.floor(count / 1_000_000).toLocaleString() + "M";
+					} else if (isPercent) {
+						el.textContent = Math.floor(count).toLocaleString() + "%";
+					} else {
+						el.textContent = Math.floor(count).toLocaleString();
+					}
 					requestAnimationFrame(update);
 				} else {
-					el.textContent =
-						(isCurrency ? "£" : "") + target.toLocaleString() + (isPercent ? "%" : "");
+					if (isCurrency) {
+						el.textContent = "£" + (target / 1_000_000).toLocaleString() + "M";
+					} else if (isPercent) {
+						el.textContent = target.toLocaleString() + "%";
+					} else {
+						el.textContent = target.toLocaleString();
+					}
 				}
 			};
 			update();
 		};
 
-		// Intersection Observer to trigger animation when visible
+		// Trigger animation when visible
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach(entry => {
@@ -198,10 +208,11 @@
 					}
 				});
 			},
-			{ threshold: 0.4 } // start when 40% visible
+			{ threshold: 0.4 }
 		);
 
 		counters.forEach(counter => observer.observe(counter));
 	});
+
 
 })(jQuery);

@@ -68,6 +68,10 @@ p {
   line-height: 30px;
 }
 
+.w-80{
+  width: 80%;
+}
+
 .rounded{
   border-radius: 15px !important;
 }
@@ -1477,6 +1481,10 @@ h3.quote::before {
   .p-5 {
     padding: 2rem !important;
   }
+  
+  h1{
+    font-size: 1.85rem;
+  }
   h2, .h2 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -1521,7 +1529,7 @@ h3.quote::before {
     padding-top: 30px;
   }
   .text-lg {
-    font-size: 3rem;
+    font-size: 1.85rem;
   }
   .widget {
     margin-bottom: 30px;
