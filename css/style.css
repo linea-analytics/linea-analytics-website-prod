@@ -68,6 +68,8 @@ p {
   line-height: 30px;
 }
 
+
+
 .w-80{
   width: 80%;
 }
@@ -1416,6 +1418,9 @@ h3.quote::before {
     bottom: 15px;
     right: 15px;
   }
+  .text-center-sm{
+  text-align: center;
+  }
 }
 .scroll-to-top:hover {
   background-color: #333;
@@ -1480,6 +1485,9 @@ h3.quote::before {
   }
   .p-5 {
     padding: 2rem !important;
+  }
+  .w-80{
+    width: 95%;
   }
   
   h1{
