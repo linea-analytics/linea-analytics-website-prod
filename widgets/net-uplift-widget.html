@@ -1,12 +1,12 @@
 <!-- SINGLE CURVE LEVEL WIDGET -->
 <div class="py-5">
-  <h4 class="text-center mb-3">Scenario impact on uplift and net uplift</h4>
+  <h4 class="text-center mb-3">How does the optimal budget level change if the economy changes?</h4>
   <div class="card p-5 shadow">
     <div class="row g-3">
       <!-- controls -->
       <div class="col-md-3 border-end">
         <form>
-          <h6 class="mb-3">Scenario level</h6>
+          <h6 class="mb-3">Select a future economy level</h6>
 
           <div class="mb-2">
             <div class="form-check">
@@ -234,13 +234,13 @@
           scales: {
             x: {
               type: 'linear',
-              title: { display: true, text: 'Spend' }
+              title: { display: true, text: 'Weekly Spend (£)' }
             },
             y: {
                 min: -10_000,
                 max: 60_000,
               type: 'linear',
-              title: { display: true, text: 'Value' }
+              title: { display: true, text: 'Weekly Uplift (£)' }
             }
           },
           plugins: {
