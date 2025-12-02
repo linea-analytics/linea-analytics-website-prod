@@ -77,13 +77,27 @@
         <!-- ARTICLE CONTENT START -->
 
         <h1>Getting Started with Meridian</h1>
-        <p>Modern marketing teams increasingly rely on Bayesian Marketing Mix Modelling to understand what drives
-          performance. Meridian is an open-source MMM framework developed by Google that offers a flexible, transparent,
-          and well-documented workflow for building robust models. This guide walks through a fully reproducible example
-          using a simple dataset containing one revenue KPI and five media channels in a national-level model. The CSV
-          file containing the data for this example is available <a
-            href="https://github.com/linea-analytics/public-data/blob/main/formatted_data_simple.csv">here</a>.</p>
-        <p>We will cover:</p>
+        <p>
+          Many teams are testing Marketing Mix Modelling (MMM) internally right now, and some of that has been driven by
+          the rise of Meridian from Google.
+          Meridian is an open-source MMM framework developed by Google that offers a flexible, transparent, and
+          well-documented workflow to accurately
+          measure the incremental return on investment (ROI) of marketing channels.
+        </p>
+        <p>
+          Meridian uses a Bayesian MMM approach. This, in Linea’s opinion, is the gold standard for measuring
+          incremental impact. The structure of
+          Bayesian MMM allows marketers to best measure the uncertainty that exists in media campaigns and use external
+          information to improve the
+          accuracy of marketing decisions.
+        </p>
+        <p>
+          This article walks through a fully reproducible example using a simple dataset containing one revenue KPI and
+          five
+          media channels in a national-level model. The CSV file containing the data for this example is available
+          <a href="https://github.com/linea-analytics/public-data/blob/main/formatted_data_simple.csv">here</a>.
+        </p>
+        <p>We will cover the 7 steps to running your open source Meridian Marketing Mix Modelling:</p>
         <ol>
           <li>Installing Meridian </li>
           <li>Importing packages and data </li>
@@ -120,7 +134,8 @@ from meridian.model import prior_distribution as pdist, spec as specmod
 # data manipulation
 import pandas as pd
 </code></pre>
-        <p>Then, using Pandas, we import our CSV file.</p>
+        <p>Then, using Pandas, we import our CSV file. This contains the breadth of variables that we are looking to
+          test in our modelling.</p>
         <pre><code>df = pd.read_csv(&quot;./formatted_data_simple.csv&quot;)
 df[&quot;date&quot;] = pd.to_datetime(df[&quot;date&quot;],format = &quot;%d/%m/%Y&quot;)
 df.head()
@@ -135,6 +150,22 @@ df.head()
           <li>The media variables (<code>media_cols</code>)</li>
           <li>The non-media variables (<code>control_cols</code>)</li>
         </ul>
+        <p>
+          As a modeller, it is important at this point to ensure you have a wide breadth of control variables for model
+          testing. When building a robust model, especially for an initial update, you will need to consider making
+          variable
+          transformations.
+          For example, if you expect warm temperatures to impact the drivers of your ice-cream sales, then you could
+          test:
+        </p>
+        <ul>
+          <li>Average temperature</li>
+          <li>Deviation from the average temperature vs. the historic average</li>
+          <li>A threshold level (e.g. 25 degrees)</li>
+        </ul>
+        <p>
+          This is just an example of why expertise is still crucial when using tools like Meridian.
+        </p>
         <pre><code># all columns in the dataframe
 all_cols = df.columns.tolist()
 
@@ -157,23 +188,35 @@ control_cols = [c for c in all_cols if c not in exclude]
         <p>Then, using Meridian&#39;s DataFrameInputDataBuilder, we construct the model specification. This,
           <code>input_data</code>, is the object that stores the data that we will pass to the modelling function.
         </p>
-        <pre><code>builder = DataFrameInputDataBuilder(kpi_type=&quot;revenue&quot;) \
-    .with_kpi(df, kpi_col=kpi_name, time_col=&quot;date&quot;) \
+        <pre><code>builder = DataFrameInputDataBuilder(kpi_type="revenue") \
+    .with_kpi(df, kpi_col=kpi_name, time_col="date") \
     .with_media(
         df,
         media_cols=media_cols,
-        media_spend_cols=media_cols,        # same as media_cols if already in spend units
-        media_channels=media_cols,          # channel labels (can be same as col names)
-        time_col=&quot;date&quot;
+        media_spend_cols=media_cols,
+        media_channels=media_cols,
+        time_col="date"
     )\
     .with_non_media_treatments(
         df, 
         non_media_treatment_cols=control_cols, 
-        time_col=&quot;date&quot;
+        time_col="date"
     )
 
 input_data = builder.build()
+model_spec = specmod.ModelSpec(
+    knots=1,   # single coefficient over time -> constant baseline
+)
 </code></pre>
+        <p>
+          Meridian's model specification does allow for some complexity to be added to the model (e.g. priors and
+          different prior distributions).
+          One critical aspect that is lacking in Meridian's, and most approaches available, is handling <a
+            href="https://linea-analytics.com/articles/optim-and-synergy/article.html">synergies</a>.
+          properly (i.e. will my marketing perform as well in periods with lower demand?).
+          At Linea we developed an approach that not only tests synergies, but also measures the how much these
+          synergies impact each variable.
+        </p>
         <h2>Running the model</h2>
         <p>Using the <code>input_data</code> object, we can now instantiate the Meridian model. This creates a Bayesian
           MMM object that holds the model structure, priors and data. The next step is to run prior sampling to verify
@@ -187,6 +230,13 @@ mmm.sample_posterior(
         <p>For the purpose of this article we are using lightweight settings to keep computation fast enough for a
           tutorial. When running models in production, you will usually want to increase the number of chains, warmup
           period and kept samples to improve stability and convergence.</p>
+        <p>
+          In our experience, we find that those running Bayesian models struggle with the time taken to run.
+          For example, the default Meridian MMM model from the official documentation can take upto 1 hour to run.
+          Other Bayesian modellers have suggested that they leave it to run overnight.
+          This need not be the case. If you want Linea to speed up your Bayesian MMM model then <a
+            href="https://calendly.com/david-walsh-linea-analytics/30min">arrange a call</a>.
+        </p>
         <pre><code># mmm.sample_posterior(
 #     n_chains=4,
 #     n_adapt=4000,
@@ -217,6 +267,7 @@ model_fit.plot_model_fit()
         <figure class="p-5">
           <img src="./model_fit.png" alt="model_fit" width="100%" class="rounded">
         </figure>
+
         <h2>Exploring model results</h2>
         <p>After confirming model quality, we can explore what the model learned about channel contributions. The
           following chart breaks down incremental impact over time, showing how each media input contributes to the
@@ -259,6 +310,16 @@ optimization_results.plot_response_curves()
 </code></pre>
         <p>This produces a set of recommended allocations and visual response curves, offering a first pass at how
           budget could be redistributed according to the model.</p>
+
+        <p>
+          At Linea, we have found that the Meridian optimisation solution lacks the flexibility to run what-if
+          scenarios.
+          Also, as a code-based interface, it’s not a tool that Marketing teams or media agencies can easily use.
+          That’s why we built the Linea Scenario Tool. It plugs into your Meridian MMM and offers an intuitive user
+          interface for cross-channel allocation and campaign planning. Crucially, it allows you to overlay how future
+          factors such as media cost inflation, economic impacts, or market changes will impact your cross-channel
+          budget decisions. <a href="https://app.linea-analytics.com/">Test it with a free trial here</a>.
+        </p>
         <figure class="p-5">
           <img src="./optimisation_curves.png" alt="optimisation_curves" width="100%" class="rounded">
         </figure>
@@ -269,8 +330,9 @@ optimization_results.plot_response_curves()
           for a quick topline view of performance.
         </p>
         <p>
-          As modelling needs grow, though, generic frameworks reach their limits. Bespoke structures tend to deliver
+          As modelling needs grow, though, generic frameworks reach their limits. Bespoke structures will deliver
           stronger accuracy and flexibility, especially when industry specifics and real world dynamics matter.
+
         </p>
         <p>
           Linea provides custom MMMs built for each sector, incorporating features such as variable <a
