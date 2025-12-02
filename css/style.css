@@ -1772,7 +1772,8 @@ h3.quote::before {
 
 /* style the <pre> itself */
 .pre-wrapper pre {
-    background: #f6f6f6;          /* light grey */
+    color: white;
+    background: #111C28;          /* light grey */
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 12px 14px;
@@ -1789,7 +1790,7 @@ h3.quote::before {
     padding: 4px 8px;
     font-size: 12px;
     cursor: pointer;
-    background: #fafafa;
+    background: #21caab;
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: background 0.15s;
