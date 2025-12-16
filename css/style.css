@@ -1762,6 +1762,7 @@ h3.quote::before {
   background-color: #f3f3f3;
 }
 
+.linea-url,
 .container.mt-5 .row.justify-content-center p a {
   color: #222;                    /* text colour */
   font-weight: bold;
