@@ -1694,6 +1694,7 @@ h3.quote::before {
   padding-left: 20px;
 }
 
+.client-logos,
 .carosel-slider .slide img {
   width: 200px;
   height: 100px;
@@ -1814,4 +1815,8 @@ h3.quote::before {
 /* hover effect */
 .copy-btn:hover {
     background: #eaeaea;
+}
+
+.transition-2{
+  transition: .2s;
 }

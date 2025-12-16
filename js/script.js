@@ -212,6 +212,17 @@
 		);
 
 		counters.forEach(counter => observer.observe(counter));
+
+		document.querySelectorAll('.card').forEach(function (card) {
+			card.addEventListener('mouseenter', function () {
+				card.style.transform = 'translateY(-6px)';
+				card.style.boxShadow = '0 1rem 2rem rgba(0,0,0,.08)';
+			});
+			card.addEventListener('mouseleave', function () {
+				card.style.transform = '';
+				card.style.boxShadow = '';
+			});
+		});
 	});
 
 
