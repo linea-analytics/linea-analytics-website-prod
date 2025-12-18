@@ -334,5 +334,13 @@
     "author": "Claudio Paladini",
     "date": "2025-12-02",
     "category": "Article"
+  },
+  {
+    "title": "Factoring in measurement from the planning stage",
+    "teaser": "Avoid collinearity issue by ensuring there is enough variance in your media-mix",
+    "folder": "multicolinearity",
+    "author": "Claudio Paladini",
+    "date": "2025-12-02",
+    "category": "Article"
   }
 ]
