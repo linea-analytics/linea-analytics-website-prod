@@ -225,5 +225,18 @@
 		});
 	});
 
+	// SLIDERS
+	document.querySelectorAll('input[type="range"]').forEach(slider => {
+		const update = () => {
+			const min = slider.min || 0
+			const max = slider.max || 100
+			const val = slider.value
+			slider.style.setProperty('--value', `${((val - min) / (max - min)) * 100}%`)
+		}
+		update()
+		slider.addEventListener('input', update)
+	})
+
+
 
 })(jQuery);
