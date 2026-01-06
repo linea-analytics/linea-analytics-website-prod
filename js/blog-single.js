@@ -57,7 +57,7 @@ function insertLatest() {
 
   const featuredArticles = [
     {
-      title: 'First step to measuring the long-term impact of Marketing: The Memory Effect',
+      title: 'First step to measuring the long-term impact of Marketing: Adstock',
       thumbnail: '/articles/adstocks/thumbnail.jpg',
       url: '/articles/adstocks/article.html'
     },

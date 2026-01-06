@@ -128,7 +128,7 @@
     "category": "Article"
   },
   {
-    "title": "First step to measuring the long-term impact of Marketing: The Memory Effect",
+    "title": "First step to measuring the long-term impact of Marketing: Adstock",
     "teaser": "Different ways of measuring adstock in MMM",
     "folder": "adstocks",
     "author": "Claudio Paladini",
@@ -336,8 +336,8 @@
     "category": "Article"
   },
   {
-    "title": "Factoring in measurement from the planning stage",
-    "teaser": "Avoid collinearity issue by ensuring there is enough variance in your media-mix",
+    "title": "Media Measurement Planning: Solving the Multicollinearity Problem",
+    "teaser": "Factoring in measurement from the planning stage",
     "folder": "multicolinearity",
     "author": "Claudio Paladini",
     "date": "2025-12-02",
