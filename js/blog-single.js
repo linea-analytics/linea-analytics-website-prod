@@ -263,6 +263,14 @@ function applyTableStyling() {
   const tables = document.querySelectorAll('table');
 
   tables.forEach(table => {
+    // Wrap the table in a scroll container if it is not already wrapped
+    if (!table.parentElement.classList.contains('table-scroll-x')) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('table-responsive');
+      table.parentElement.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+
     // Add table classes
     table.classList.add('table', 'table-sm', 'align-middle');
 
@@ -273,6 +281,8 @@ function applyTableStyling() {
     }
   });
 }
+
+
 document.addEventListener('DOMContentLoaded', function () {
   applyTableStyling();
 });
